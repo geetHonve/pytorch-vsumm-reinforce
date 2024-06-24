@@ -7,7 +7,7 @@ import h5py
 import time
 import datetime
 import numpy as np
-from tabulate import tabulate
+#from tabulate import tabulate
 
 import torch
 import torch.nn as nn
@@ -194,8 +194,8 @@ def evaluate(model, dataset, test_keys, use_gpu):
                 h5_res.create_dataset(key + '/gtscore', data=dataset[key]['gtscore'][...])
                 h5_res.create_dataset(key + '/fm', data=fm)
 
-    if args.verbose:
-        print(tabulate(table))
+    #if args.verbose:
+        #print(tabulate(table))
 
     if args.save_results: h5_res.close()
 
