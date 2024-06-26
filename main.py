@@ -73,6 +73,7 @@ def main():
 
     print("Initialize dataset {}".format(args.dataset))
     dataset = h5py.File(args.dataset, 'r')
+    print(dataset)
     num_videos = len(dataset.keys())
     splits = read_json(args.split)
     assert args.split_id < len(splits), "split_id (got {}) exceeds {}".format(args.split_id, len(splits))
